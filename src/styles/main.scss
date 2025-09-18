@@ -1,0 +1,22 @@
+@use "fonts";
+@use "colors";
+@use "loader";
+@use "cards";
+@use "generalpages";
+@use "buttons";
+@use "structure";
+// @use "responsive";
+
+html,
+body {
+  font-family: "SF Pro", sans-serif;
+  @include colors.background(blue);
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+

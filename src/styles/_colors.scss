@@ -1,0 +1,57 @@
+$mainblue: #1483bb;
+$vibrantblue: #007aff;
+$darkblue: #002e58;
+$lightblue: #eef8f8;
+$white: #ffffff;
+$backgroundCards: linear-gradient(
+  to bottom,
+  rgb(203, 249, 255, 0.4),
+  rgba(20, 167, 187, 0.1)
+);
+$backgroundCardsCart: linear-gradient(
+  to right,
+  rgb(203, 249, 255, 0.4),
+  rgba(20, 167, 187, 0.1)
+);
+
+@mixin background($background) {
+  @if $background == blue {
+    background: linear-gradient(
+        45deg,
+        rgba(128, 222, 239, 0.2) 0%,
+        rgba(140, 249, 210, 0.2) 25%
+      ),
+      linear-gradient(45deg, $lightblue 0%, $mainblue 100%);
+    background-attachment: fixed;
+  } @else {
+    background-color: $white;
+  }
+
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: -100px;
+    right: -900px;
+    width: 100%;
+    height: 100vw;
+    background: url("../assets/logos/icone_original.png") repeat;
+    opacity: 0.08;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: url("../assets/logos/icone_original.png") no-repeat;
+    opacity: 0.08;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+}

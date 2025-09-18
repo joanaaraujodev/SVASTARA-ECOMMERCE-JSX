@@ -1,0 +1,7 @@
+@mixin hamburguer() {
+  content: "";
+  border-bottom: 4px solid black;
+  border-radius: 40px;
+  width: 2rem;
+  display: block;
+}
