@@ -19,7 +19,7 @@ import { CartProvider } from "./components/CartContext";
 import CartNotification from "./components/CartNotification";
 import { FavoritesProvider } from "./components/FavoritesContext";
 import FavsNotification from "./components/FavsNotification";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
